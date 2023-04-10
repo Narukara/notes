@@ -1,0 +1,10 @@
+[book]
+authors = ["Narukara"]
+language = "zh-CN"
+multilingual = false
+src = "src"
+title = "My Notes"
+
+[output.html]
+git-repository-url = "https://github.com/Narukara/notes"
+mathjax-support = true
