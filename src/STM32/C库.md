@@ -10,8 +10,6 @@
 | `librdimon_nano.a` | newlib nano 库 带有 semihosting                        |
 | `*.specs`          | 在链接时使用的文件, 在链接参数里指定, 用于链接不同的库 |
 
-<img src=".assets/image-20220626013523816.png" alt="image-20220626013523816" style="zoom: 50%;" />
-
 使用时需要实现一些桩函数, 除非指定了 nosys.specs 或使用 semihosting 库
 
 ### Semihosting
