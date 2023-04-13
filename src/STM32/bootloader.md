@@ -19,15 +19,24 @@ MEMORY
 }
 ```
 
+- `bootrom` 里是 bootloader 的中断向量表、text、data
+- `approm` 里是 app 的中断向量表、text、data
+- `ram` 是共享的
+
 2. 在 bootloader 中引导 app
 
 ```c
-uint32_t* p = (uint32_t*)&__approm_start__;	// 获取 app 的中断向量表地址
-uint32_t msp = p[0];						// app 的 msp
-uint32_t entry = p[1];						// app 的 入口地址
-__asm("msr msp, %0;" ::"r"(msp)); 	 		// 设置 msp
-((void (*)())entry)();             			// 跳转到 app 的 Reset_Handler
+int main() {
+    uint32_t* p = (uint32_t*)&__approm_start__;	// 获取 app 的中断向量表地址
+    uint32_t msp = p[0];						// app 的 msp
+    uint32_t entry = p[1];						// app 的 入口地址
+    __asm("msr msp, %0;" ::"r"(msp)); 	 		// 设置 msp
+    ((void (*)())entry)();             			// 跳转到 app 的 Reset_Handler
+}
 ```
 
-3. 在 app 的 Reset_Handler 里重定位中断向量表
+- bootloader 先启动（因为它的中断向量在 `0x08000000`），经过 `Reset_Handler` 进入 `main()`
+- 在 bootloader 的 `main()` 里读 app 的中断向量表，引导 app 启动
+
+3. 在 app 的 Reset_Handler 里重定位中断向量表，以便后续使用 app 的中断 Handler
 4. bootloader 和 app 分别编译连接，可以分别下载，或者合并 bin 文件一起下载
