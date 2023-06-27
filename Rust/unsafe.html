@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>unsafe - My Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html"><strong aria-hidden="true">1.</strong> readme</a></li><li class="chapter-item "><a href="../c/title.html"><strong aria-hidden="true">2.</strong> C 语言</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c/基础.html"><strong aria-hidden="true">2.1.</strong> 基础</a></li><li class="chapter-item "><a href="../c/黑魔法.html"><strong aria-hidden="true">2.2.</strong> 黑魔法</a></li></ol></li><li class="chapter-item "><a href="../cpp/title.html"><strong aria-hidden="true">3.</strong> C++</a></li><li class="chapter-item "><a href="../Makefile/title.html"><strong aria-hidden="true">4.</strong> Makefile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Makefile/基础.html"><strong aria-hidden="true">4.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../CMake/title.html"><strong aria-hidden="true">5.</strong> CMake</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CMake/基础.html"><strong aria-hidden="true">5.1.</strong> 基础</a></li></ol></li><li class="chapter-item expanded "><a href="../Rust/title.html"><strong aria-hidden="true">6.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Rust/工具链.html"><strong aria-hidden="true">6.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../Rust/变量和类型.html"><strong aria-hidden="true">6.2.</strong> 变量和类型</a></li><li class="chapter-item "><a href="../Rust/常用宏.html"><strong aria-hidden="true">6.3.</strong> 常用宏</a></li><li class="chapter-item "><a href="../Rust/语句&函数&注释.html"><strong aria-hidden="true">6.4.</strong> 语句&amp;函数&amp;注释</a></li><li class="chapter-item "><a href="../Rust/所有权和引用.html"><strong aria-hidden="true">6.5.</strong> 所有权和引用</a></li><li class="chapter-item "><a href="../Rust/slice.html"><strong aria-hidden="true">6.6.</strong> slice</a></li><li class="chapter-item "><a href="../Rust/结构体.html"><strong aria-hidden="true">6.7.</strong> 结构体</a></li><li class="chapter-item "><a href="../Rust/枚举.html"><strong aria-hidden="true">6.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../Rust/控制流.html"><strong aria-hidden="true">6.9.</strong> 控制流</a></li><li class="chapter-item "><a href="../Rust/项目管理.html"><strong aria-hidden="true">6.10.</strong> 项目管理</a></li><li class="chapter-item "><a href="../Rust/字符串.html"><strong aria-hidden="true">6.11.</strong> 字符串</a></li><li class="chapter-item "><a href="../Rust/Vec.html"><strong aria-hidden="true">6.12.</strong> Vec</a></li><li class="chapter-item "><a href="../Rust/HashMap.html"><strong aria-hidden="true">6.13.</strong> HashMap</a></li><li class="chapter-item "><a href="../Rust/错误处理.html"><strong aria-hidden="true">6.14.</strong> 错误处理</a></li><li class="chapter-item "><a href="../Rust/泛型.html"><strong aria-hidden="true">6.15.</strong> 泛型</a></li><li class="chapter-item "><a href="../Rust/生命周期.html"><strong aria-hidden="true">6.16.</strong> 生命周期</a></li><li class="chapter-item "><a href="../Rust/Trait.html"><strong aria-hidden="true">6.17.</strong> Trait</a></li><li class="chapter-item "><a href="../Rust/测试.html"><strong aria-hidden="true">6.18.</strong> 测试</a></li><li class="chapter-item "><a href="../Rust/闭包.html"><strong aria-hidden="true">6.19.</strong> 闭包</a></li><li class="chapter-item "><a href="../Rust/迭代器.html"><strong aria-hidden="true">6.20.</strong> 迭代器</a></li><li class="chapter-item "><a href="../Rust/智能指针.html"><strong aria-hidden="true">6.21.</strong> 智能指针</a></li><li class="chapter-item "><a href="../Rust/并发.html"><strong aria-hidden="true">6.22.</strong> 并发</a></li><li class="chapter-item "><a href="../Rust/trait对象.html"><strong aria-hidden="true">6.23.</strong> trait对象</a></li><li class="chapter-item expanded "><a href="../Rust/unsafe.html" class="active"><strong aria-hidden="true">6.24.</strong> unsafe</a></li><li class="chapter-item "><a href="../Rust/宏.html"><strong aria-hidden="true">6.25.</strong> 宏</a></li></ol></li><li class="chapter-item "><a href="../Git/title.html"><strong aria-hidden="true">7.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Git/基础.html"><strong aria-hidden="true">7.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../51/title.html"><strong aria-hidden="true">8.</strong> 51单片机</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../51/串行接口.html"><strong aria-hidden="true">8.1.</strong> 串行接口</a></li><li class="chapter-item "><a href="../51/定时器计数器.html"><strong aria-hidden="true">8.2.</strong> 定时器计数器</a></li><li class="chapter-item "><a href="../51/中断.html"><strong aria-hidden="true">8.3.</strong> 中断</a></li><li class="chapter-item "><a href="../51/储存类型.html"><strong aria-hidden="true">8.4.</strong> 储存类型</a></li></ol></li><li class="chapter-item "><a href="../STM32/title.html"><strong aria-hidden="true">9.</strong> STM32</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../STM32/工具链.html"><strong aria-hidden="true">9.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../STM32/启动文件.html"><strong aria-hidden="true">9.2.</strong> 启动文件</a></li><li class="chapter-item "><a href="../STM32/链接脚本.html"><strong aria-hidden="true">9.3.</strong> 连接脚本</a></li><li class="chapter-item "><a href="../STM32/C库.html"><strong aria-hidden="true">9.4.</strong> C 库</a></li><li class="chapter-item "><a href="../STM32/bootloader.html"><strong aria-hidden="true">9.5.</strong> bootloader</a></li><li class="chapter-item "><a href="../STM32/下载和调试.html"><strong aria-hidden="true">9.6.</strong> 下载和调试</a></li></ol></li><li class="chapter-item "><a href="../LVGL/title.html"><strong aria-hidden="true">10.</strong> LVGL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LVGL/移植.html"><strong aria-hidden="true">10.1.</strong> 移植</a></li></ol></li><li class="chapter-item "><a href="../Haskell/title.html"><strong aria-hidden="true">11.</strong> Haskell</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Haskell/函数式基础.html"><strong aria-hidden="true">11.1.</strong> 函数式基础</a></li><li class="chapter-item "><a href="../Haskell/ghci.html"><strong aria-hidden="true">11.2.</strong> ghci</a></li><li class="chapter-item "><a href="../Haskell/类型.html"><strong aria-hidden="true">11.3.</strong> 类型</a></li><li class="chapter-item "><a href="../Haskell/表达式.html"><strong aria-hidden="true">11.4.</strong> 表达式</a></li><li class="chapter-item "><a href="../Haskell/函数.html"><strong aria-hidden="true">11.5.</strong> 函数</a></li><li class="chapter-item "><a href="../Haskell/工具模块和函数.html"><strong aria-hidden="true">11.6.</strong> 工具模块和函数</a></li><li class="chapter-item "><a href="../Haskell/模块.html"><strong aria-hidden="true">11.7.</strong> 模块</a></li></ol></li><li class="chapter-item "><a href="../Verilog/title.html"><strong aria-hidden="true">12.</strong> Verilog</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Verilog/基础.html"><strong aria-hidden="true">12.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../LaTeX/title.html"><strong aria-hidden="true">13.</strong> LaTeX</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LaTeX/基础.html"><strong aria-hidden="true">13.1.</strong> 基础</a></li><li class="chapter-item "><a href="../LaTeX/排版文字.html"><strong aria-hidden="true">13.2.</strong> 排版文字</a></li><li class="chapter-item "><a href="../LaTeX/文档元素.html"><strong aria-hidden="true">13.3.</strong> 文档元素</a></li><li class="chapter-item "><a href="../LaTeX/宏包.html"><strong aria-hidden="true">13.4.</strong> 宏包</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Narukara/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="unsafe-rust"><a class="header" href="#unsafe-rust">unsafe Rust</a></h2>
+<p>在 <code>unsafe</code> 块中，允许进行这五类特殊操作：</p>
+<ul>
+<li>解引用裸指针</li>
+<li>调用不安全的函数或方法</li>
+<li>访问或修改可变静态变量</li>
+<li>实现不安全 trait</li>
+<li>访问 <code>union</code> 的字段</li>
+</ul>
+<p>注意：<code>unsafe</code> 并不会关闭借用检查器或禁用任何其他 Rust 安全检查</p>
+<p>创建不安全代码的安全抽象是 Rust 中一种重要的设计模式。将底层的、Rust 编译器不能理解的操作在 <code>unsafe</code> 块中实现，封装为安全的函数等抽象。</p>
+<h4 id="裸指针"><a class="header" href="#裸指针">裸指针</a></h4>
+<p>类型为 <code>*const T</code> 或 <code>*mut T</code>，分别是（底层）不可变或可变的。裸指针允许忽略借用规则、不保证指向有效的内存、允许为空、不能实现任何自动清理功能</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let mut a = 10;
+let p: *mut i32 = &amp;mut a;	// 通过引用创建裸指针
+let p = 0x0800_0000 as *mut i32;	// 通过地址创建裸指针
+<span class="boring">}
+</span></code></pre></pre>
+<p>裸指针可以在安全代码中创建，但只能在 <code>unsafe</code> 中解引用</p>
+<h4 id="调用不安全函数"><a class="header" href="#调用不安全函数">调用不安全函数</a></h4>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>unsafe fn dangerous() {}
+<span class="boring">}
+</span></code></pre></pre>
+<p>调用不安全函数需要在 <code>unsafe</code> 块中进行。不安全函数内部看作 <code>unsafe</code> 块，可以在其中进行各种 <code>unsafe</code> 操作</p>
+<h4 id="外部函数接口"><a class="header" href="#外部函数接口">外部函数接口</a></h4>
+<p>为了与其他语言编写的代码交互，可以通过外部函数接口（FFI）。外部函数总被认为是不安全的：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>extern &quot;C&quot; {
+    fn abs(input: i32) -&gt; i32;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>&quot;C&quot;</code> 定义了外部函数所使用的 应用二进制接口（ABI）。ABI 定义了如何在汇编语言层面调用此函数。<code>&quot;C&quot;</code> ABI 是最常见的，并遵循 C 编程语言的 ABI。</p>
+<p>另外，可以将 Rust 函数提供给其他语言使用：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>#[no_mangle]
+pub extern &quot;C&quot; fn call_from_c() {
+    println!(&quot;Just called a Rust function from C!&quot;);
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>#[no_mangle]</code> 注解要求 Rust 编译器不要 mangle 此函数的名称</p>
+<h4 id="静态变量"><a class="header" href="#静态变量">静态变量</a></h4>
+<p>静态变量即全局变量：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>static MY_NAME: String = String::new();	// 不可变的
+static mut AGE: u32 = 1;	// 可变的
+<span class="boring">}
+</span></code></pre></pre>
+<p>访问不可变静态变量是安全的，任何对可变静态变量的访问都是不安全的</p>
+<h4 id="不安全-trait"><a class="header" href="#不安全-trait">不安全 trait</a></h4>
+<p>当 trait 中至少有一个方法中包含编译器无法验证的不变式（invariant）时 trait 是不安全的</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>unsafe trait Foo {...}
+unsafe impl Foo for i32 {...}
+<span class="boring">}
+</span></code></pre></pre>
+<h4 id="访问联合体"><a class="header" href="#访问联合体">访问联合体</a></h4>
+<p>联合体 <code>union</code> 主要用于和 C 代码中的联合体交互，访问联合体的字段是不安全的</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Rust/trait对象.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../Rust/宏.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Rust/trait对象.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../Rust/宏.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

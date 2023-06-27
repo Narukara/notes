@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基础 - My Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html"><strong aria-hidden="true">1.</strong> readme</a></li><li class="chapter-item expanded "><a href="../c/title.html"><strong aria-hidden="true">2.</strong> C 语言</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../c/基础.html" class="active"><strong aria-hidden="true">2.1.</strong> 基础</a></li><li class="chapter-item "><a href="../c/黑魔法.html"><strong aria-hidden="true">2.2.</strong> 黑魔法</a></li></ol></li><li class="chapter-item "><a href="../cpp/title.html"><strong aria-hidden="true">3.</strong> C++</a></li><li class="chapter-item "><a href="../Makefile/title.html"><strong aria-hidden="true">4.</strong> Makefile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Makefile/基础.html"><strong aria-hidden="true">4.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../CMake/title.html"><strong aria-hidden="true">5.</strong> CMake</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CMake/基础.html"><strong aria-hidden="true">5.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../Rust/title.html"><strong aria-hidden="true">6.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Rust/工具链.html"><strong aria-hidden="true">6.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../Rust/变量和类型.html"><strong aria-hidden="true">6.2.</strong> 变量和类型</a></li><li class="chapter-item "><a href="../Rust/常用宏.html"><strong aria-hidden="true">6.3.</strong> 常用宏</a></li><li class="chapter-item "><a href="../Rust/语句&函数&注释.html"><strong aria-hidden="true">6.4.</strong> 语句&amp;函数&amp;注释</a></li><li class="chapter-item "><a href="../Rust/所有权和引用.html"><strong aria-hidden="true">6.5.</strong> 所有权和引用</a></li><li class="chapter-item "><a href="../Rust/slice.html"><strong aria-hidden="true">6.6.</strong> slice</a></li><li class="chapter-item "><a href="../Rust/结构体.html"><strong aria-hidden="true">6.7.</strong> 结构体</a></li><li class="chapter-item "><a href="../Rust/枚举.html"><strong aria-hidden="true">6.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../Rust/控制流.html"><strong aria-hidden="true">6.9.</strong> 控制流</a></li><li class="chapter-item "><a href="../Rust/项目管理.html"><strong aria-hidden="true">6.10.</strong> 项目管理</a></li><li class="chapter-item "><a href="../Rust/字符串.html"><strong aria-hidden="true">6.11.</strong> 字符串</a></li><li class="chapter-item "><a href="../Rust/Vec.html"><strong aria-hidden="true">6.12.</strong> Vec</a></li><li class="chapter-item "><a href="../Rust/HashMap.html"><strong aria-hidden="true">6.13.</strong> HashMap</a></li><li class="chapter-item "><a href="../Rust/错误处理.html"><strong aria-hidden="true">6.14.</strong> 错误处理</a></li><li class="chapter-item "><a href="../Rust/泛型.html"><strong aria-hidden="true">6.15.</strong> 泛型</a></li><li class="chapter-item "><a href="../Rust/生命周期.html"><strong aria-hidden="true">6.16.</strong> 生命周期</a></li><li class="chapter-item "><a href="../Rust/Trait.html"><strong aria-hidden="true">6.17.</strong> Trait</a></li><li class="chapter-item "><a href="../Rust/测试.html"><strong aria-hidden="true">6.18.</strong> 测试</a></li><li class="chapter-item "><a href="../Rust/闭包.html"><strong aria-hidden="true">6.19.</strong> 闭包</a></li><li class="chapter-item "><a href="../Rust/迭代器.html"><strong aria-hidden="true">6.20.</strong> 迭代器</a></li><li class="chapter-item "><a href="../Rust/智能指针.html"><strong aria-hidden="true">6.21.</strong> 智能指针</a></li><li class="chapter-item "><a href="../Rust/并发.html"><strong aria-hidden="true">6.22.</strong> 并发</a></li><li class="chapter-item "><a href="../Rust/trait对象.html"><strong aria-hidden="true">6.23.</strong> trait对象</a></li><li class="chapter-item "><a href="../Rust/unsafe.html"><strong aria-hidden="true">6.24.</strong> unsafe</a></li><li class="chapter-item "><a href="../Rust/宏.html"><strong aria-hidden="true">6.25.</strong> 宏</a></li></ol></li><li class="chapter-item "><a href="../Git/title.html"><strong aria-hidden="true">7.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Git/基础.html"><strong aria-hidden="true">7.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../51/title.html"><strong aria-hidden="true">8.</strong> 51单片机</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../51/串行接口.html"><strong aria-hidden="true">8.1.</strong> 串行接口</a></li><li class="chapter-item "><a href="../51/定时器计数器.html"><strong aria-hidden="true">8.2.</strong> 定时器计数器</a></li><li class="chapter-item "><a href="../51/中断.html"><strong aria-hidden="true">8.3.</strong> 中断</a></li><li class="chapter-item "><a href="../51/储存类型.html"><strong aria-hidden="true">8.4.</strong> 储存类型</a></li></ol></li><li class="chapter-item "><a href="../STM32/title.html"><strong aria-hidden="true">9.</strong> STM32</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../STM32/工具链.html"><strong aria-hidden="true">9.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../STM32/启动文件.html"><strong aria-hidden="true">9.2.</strong> 启动文件</a></li><li class="chapter-item "><a href="../STM32/链接脚本.html"><strong aria-hidden="true">9.3.</strong> 连接脚本</a></li><li class="chapter-item "><a href="../STM32/C库.html"><strong aria-hidden="true">9.4.</strong> C 库</a></li><li class="chapter-item "><a href="../STM32/bootloader.html"><strong aria-hidden="true">9.5.</strong> bootloader</a></li><li class="chapter-item "><a href="../STM32/下载和调试.html"><strong aria-hidden="true">9.6.</strong> 下载和调试</a></li></ol></li><li class="chapter-item "><a href="../LVGL/title.html"><strong aria-hidden="true">10.</strong> LVGL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LVGL/移植.html"><strong aria-hidden="true">10.1.</strong> 移植</a></li></ol></li><li class="chapter-item "><a href="../Haskell/title.html"><strong aria-hidden="true">11.</strong> Haskell</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Haskell/函数式基础.html"><strong aria-hidden="true">11.1.</strong> 函数式基础</a></li><li class="chapter-item "><a href="../Haskell/ghci.html"><strong aria-hidden="true">11.2.</strong> ghci</a></li><li class="chapter-item "><a href="../Haskell/类型.html"><strong aria-hidden="true">11.3.</strong> 类型</a></li><li class="chapter-item "><a href="../Haskell/表达式.html"><strong aria-hidden="true">11.4.</strong> 表达式</a></li><li class="chapter-item "><a href="../Haskell/函数.html"><strong aria-hidden="true">11.5.</strong> 函数</a></li><li class="chapter-item "><a href="../Haskell/工具模块和函数.html"><strong aria-hidden="true">11.6.</strong> 工具模块和函数</a></li><li class="chapter-item "><a href="../Haskell/模块.html"><strong aria-hidden="true">11.7.</strong> 模块</a></li></ol></li><li class="chapter-item "><a href="../Verilog/title.html"><strong aria-hidden="true">12.</strong> Verilog</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Verilog/基础.html"><strong aria-hidden="true">12.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../LaTeX/title.html"><strong aria-hidden="true">13.</strong> LaTeX</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LaTeX/基础.html"><strong aria-hidden="true">13.1.</strong> 基础</a></li><li class="chapter-item "><a href="../LaTeX/排版文字.html"><strong aria-hidden="true">13.2.</strong> 排版文字</a></li><li class="chapter-item "><a href="../LaTeX/文档元素.html"><strong aria-hidden="true">13.3.</strong> 文档元素</a></li><li class="chapter-item "><a href="../LaTeX/宏包.html"><strong aria-hidden="true">13.4.</strong> 宏包</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Narukara/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="1-初识-c-语言"><a class="header" href="#1-初识-c-语言">1 初识 C 语言</a></h2>
+<p>C语言标准：</p>
+<ul>
+<li>K&amp;R C，经典 C</li>
+<li>ANSI C，ISO C，C89，C90</li>
+<li>C99</li>
+<li>C11</li>
+</ul>
+<hr />
+<h2 id="3-数据和-c"><a class="header" href="#3-数据和-c">3 数据和 C</a></h2>
+<h4 id="c99-新类型"><a class="header" href="#c99-新类型">C99 新类型</a></h4>
+<pre><code class="language-c">_Bool a;
+double _Complex b;
+double _Imaginary c;
+</code></pre>
+<p>或者 <code>#include &lt;complex.h&gt;</code></p>
+<h4 id="c99-可移植类型"><a class="header" href="#c99-可移植类型">C99 可移植类型</a></h4>
+<pre><code class="language-c">#include &lt;stdint.h&gt;
+int32_t i;
+int_least8_t j;
+int_fast8_t k;
+intmax_t l;
+
+#include &lt;inttypes.h&gt;
+printf(&quot;%&quot; PRId32 &quot;\n&quot;, i);
+</code></pre>
+<h4 id="浮点数的上溢和下溢"><a class="header" href="#浮点数的上溢和下溢">浮点数的上溢和下溢</a></h4>
+<p>...</p>
+<hr />
+<h2 id="5-运算符表达式和语句"><a class="header" href="#5-运算符表达式和语句">5 运算符、表达式和语句</a></h2>
+<p>运算符, 表达式, 语句</p>
+<p>每个表达式都有一个值</p>
+<hr />
+<h2 id="6-c-控制语句循环"><a class="header" href="#6-c-控制语句循环">6 C 控制语句：循环</a></h2>
+<h4 id="逗号运算符"><a class="header" href="#逗号运算符">逗号运算符</a></h4>
+<p>整个表达式的值是逗号右侧表达式的值</p>
+<hr />
+<h2 id="8-字符输入输出和输入验证"><a class="header" href="#8-字符输入输出和输入验证">8 字符输入/输出和输入验证</a></h2>
+<ul>
+<li>
+<p>缓冲输入/无缓冲输入</p>
+</li>
+<li>
+<p>键盘模拟文件结尾:</p>
+<ul>
+<li>大多数UNIX和Linux系统: 一行开始处Ctrl+D</li>
+<li>许多微型计算机: 一行开始处Ctrl+Z</li>
+<li>一些系统:任意位置的Ctrl+Z</li>
+</ul>
+</li>
+<li>
+<p>命令行重定向</p>
+</li>
+</ul>
+<pre><code class="language-bash">echo_eof &lt; mywords &gt; savewords
+</code></pre>
+<p>重定向 stdin 为 mywords, 重定向 stdout 为 savewords</p>
+<hr />
+<h2 id="10-数组和指针"><a class="header" href="#10-数组和指针">10 数组和指针</a></h2>
+<h4 id="数组指针指针数组"><a class="header" href="#数组指针指针数组">数组指针/指针数组</a></h4>
+<pre><code class="language-c">int arr[2][3];
+int(*p)[3] = arr;
+void show(int array[][3], int rows);
+</code></pre>
+<h4 id="const-指针与安全性"><a class="header" href="#const-指针与安全性">const 指针与安全性</a></h4>
+<p>...</p>
+<h4 id="变长数组vla"><a class="header" href="#变长数组vla">变长数组VLA</a></h4>
+<pre><code class="language-c">int n = 2, m = 3;
+int arr[n][m];
+void show(int n, int m, int array[n][m]);
+</code></pre>
+<h4 id="复合字面量"><a class="header" href="#复合字面量">复合字面量</a></h4>
+<pre><code class="language-c">(int[]){1, 2, 3};
+</code></pre>
+<hr />
+<h2 id="11-字符串和字符串函数"><a class="header" href="#11-字符串和字符串函数">11 字符串和字符串函数</a></h2>
+<h4 id="数组与指针的区别"><a class="header" href="#数组与指针的区别">数组与指针的区别</a></h4>
+<pre><code class="language-c">char s[] = &quot;hello&quot;;
+char* p = &quot;world&quot;;
+</code></pre>
+<h4 id="fgets-和-fputs"><a class="header" href="#fgets-和-fputs"><code>fgets()</code> 和 <code>fputs()</code></a></h4>
+<p>...</p>
+<h4 id="命令行参数"><a class="header" href="#命令行参数">命令行参数</a></h4>
+<pre><code class="language-c">int main(int argc, char* argv[]) {}
+</code></pre>
+<p>其中 <code>argv[0]</code> 是程序本身的名称</p>
+<hr />
+<h2 id="12-存储类别链接和内存管理"><a class="header" href="#12-存储类别链接和内存管理">12 存储类别、链接和内存管理</a></h2>
+<table><thead><tr><th>储存类别</th><th>储存期</th><th>作用域</th><th>链接</th><th>声明方式</th><th>其他</th></tr></thead><tbody>
+<tr><td>自动</td><td>自动</td><td>块</td><td>无</td><td>块内 (auto)</td><td></td></tr>
+<tr><td>寄存器</td><td>自动</td><td>块</td><td>无</td><td>块内 register 请求</td><td>可作形参, 不能取地址</td></tr>
+<tr><td>静态无链接</td><td>静态</td><td>块</td><td>无</td><td>块内 static</td><td>默认初始化为0</td></tr>
+<tr><td>静态内部链接</td><td>静态</td><td>文件</td><td>内部</td><td>所有函数外 static</td><td>默认初始化为0</td></tr>
+<tr><td>静态外部链接</td><td>静态</td><td>文件</td><td>外部</td><td>所有函数外</td><td>其他文件需要extern声明, 默认初始化0</td></tr>
+<tr><td>动态内存分配</td><td>手动</td><td>手动</td><td>-</td><td>调用相关函数</td><td></td></tr>
+</tbody></table>
+<table><thead><tr><th>限定符</th><th>说明</th></tr></thead><tbody>
+<tr><td>const</td><td>*前表明不能改变指针所指向的值, *后表明指针不能指向别处(指针本身的值不变)</td></tr>
+<tr><td>volatile</td><td>告知编译器某一值可能被其他程序或线程改变, 阻止高速缓存优化</td></tr>
+<tr><td>restrict</td><td>声明某一指针为访问所指向对象的唯一且初始的方式, 帮助编译器优化</td></tr>
+<tr><td>_Atomic</td><td>多线程中的原子类型, 和原子操作配合使用</td></tr>
+</tbody></table>
+<hr />
+<h2 id="13-文件输入输出"><a class="header" href="#13-文件输入输出">13 文件输入/输出</a></h2>
+<p>文本模式/二进制模式</p>
+<p>某些（非常老的）OS上会以不同的形式存储文本文件和二进制文件。另外还有行结束符之类的问题。</p>
+<p>fopen()的模式字符串：注意，在所有符合 POSIX 的系统上，模式参数 <code>b</code> 事实上没有任何效果</p>
+<table><thead><tr><th>模式字符串</th><th>说明</th></tr></thead><tbody>
+<tr><td>r</td><td>读模式</td></tr>
+<tr><td>w</td><td>写模式。把现有文件内容清空。如果文件不存在，则创建</td></tr>
+<tr><td>a</td><td>写模式。在现有文件末尾添加。如果文件不存在，则创建</td></tr>
+<tr><td>r+</td><td>更新模式，可以读写</td></tr>
+<tr><td>w+</td><td>更新模式，可以读写。把现有文件内容清空。如果文件不存在，则创建</td></tr>
+<tr><td>a+</td><td>更新模式，可以读写。在现有文件末尾添加。如果文件不存在，则创建</td></tr>
+<tr><td>b</td><td>附加在上面的模式上，使用二进制模式而非文本模式。</td></tr>
+<tr><td>x</td><td>C11 特性。附加在上面的模式上，如果文件已存在或以独占模式打开文件，则打开失败</td></tr>
+</tbody></table>
+<p>随机访问: rewind() 函数 fseek() 和 ftell() 函数, fgetpos() 和 fsetpos() 函数</p>
+<p>其他标准I/O函数: ungetc(): 把指定字符放回输入流, fflush(), setvbuf()</p>
+<p>二进制I/O: fread() 和 fwrite()</p>
+<p>区分EOF和读取错误 feof() ferror()</p>
+<hr />
+<h2 id="14-结构和其他数据形式"><a class="header" href="#14-结构和其他数据形式">14 结构和其他数据形式</a></h2>
+<h4 id="结构体的初始化"><a class="header" href="#结构体的初始化">结构体的初始化</a></h4>
+<pre><code class="language-c">struct book {
+    char name[20];
+    float price;
+};
+struct book a = {&quot;Cpp&quot;, 9.99};
+struct book b = {
+    .name = &quot;Cpppp&quot;,
+    .price = 19.99
+};
+
+struct box {
+    int num;
+    struct book inner;
+};
+struct box c = {1, {&quot;cpp&quot;, 9.99}};
+</code></pre>
+<h4 id="结构体直接拷贝"><a class="header" href="#结构体直接拷贝">结构体直接拷贝</a></h4>
+<pre><code class="language-c">struct book apy = a;
+</code></pre>
+<p>结构作为函数参数/返回值, 或结构指针作为函数参数 优缺点</p>
+<h4 id="复合字面量-1"><a class="header" href="#复合字面量-1">复合字面量</a></h4>
+<pre><code class="language-c">(struct book){&quot;app&quot;, 99.99};
+</code></pre>
+<h4 id="伸缩型数组成员"><a class="header" href="#伸缩型数组成员">伸缩型数组成员</a></h4>
+<pre><code class="language-c">struct flex {
+    int num;
+    int scores[];
+};
+struct flex* p = malloc(sizeof(struct flex) + 5 * sizeof(int));
+free(p);
+</code></pre>
+<h4 id="联合-匿名结构-匿名联合"><a class="header" href="#联合-匿名结构-匿名联合">联合, 匿名结构, 匿名联合</a></h4>
+<pre><code class="language-c">struct car {
+    int status;
+    union {
+        int num;
+        char c;
+    };
+};
+</code></pre>
+<h4 id="枚举"><a class="header" href="#枚举">枚举</a></h4>
+<pre><code class="language-c">enum color { red, orange, yellow, green, blue };
+enum color t = red;
+switch (t) {
+    case red:
+        /* code */
+        break;
+    case orange:
+        /* code */
+        break;
+    default:
+        break;
+}
+</code></pre>
+<h4 id="函数指针"><a class="header" href="#函数指针">函数指针</a></h4>
+<pre><code class="language-c">int fun() {
+    ...
+}
+
+int (*f)() = fun;
+
+// 用 typedef 简化
+typedef int (*fn_t)();
+</code></pre>
+<hr />
+<h2 id="15-位操作"><a class="header" href="#15-位操作">15 位操作</a></h2>
+<h4 id="位字段"><a class="header" href="#位字段">位字段</a></h4>
+<pre><code class="language-c">struct box_props {
+    bool opaque             : 1;
+    unsigned int fill_color : 3;
+    unsigned int            : 4;
+};
+struct box_props prop;
+prop.opaque = true;
+prop.fill_color = 4;
+</code></pre>
+<h4 id="对齐特性-c11"><a class="header" href="#对齐特性-c11">对齐特性 C11</a></h4>
+<p>注意：对齐特性会影响结构体的大小, 设计结构体时要注意</p>
+<pre><code class="language-c">size_t t = _Alignof(float);
+_Alignas(4) char c1;
+_Alignas(float) char c2;
+</code></pre>
+<hr />
+<h2 id="16-c-预处理器和-c-库"><a class="header" href="#16-c-预处理器和-c-库">16 C 预处理器和 C 库</a></h2>
+<h4 id="预处理前-翻译处理"><a class="header" href="#预处理前-翻译处理">预处理前: 翻译处理</a></h4>
+<ol>
+<li>
+<p>字符扩展</p>
+</li>
+<li>
+<p>反斜杠续行(物理行-&gt;逻辑行)</p>
+</li>
+<li>
+<p>把文本划分呢为 预处理记号序列, 空白序列, 注释序列</p>
+<p>用空格替换注释</p>
+</li>
+</ol>
+<h4 id="宏"><a class="header" href="#宏">宏</a></h4>
+<pre><code class="language-c">#undef
+#ifdef
+#if defined ()
+#ifndef
+#if
+#elif
+#endif
+</code></pre>
+<h4 id="预处理阶段"><a class="header" href="#预处理阶段">预处理阶段</a></h4>
+<pre><code class="language-c">#define PSQR(x) printf(&quot;the square of &quot; #x &quot; is %d.\n&quot;,((x)*(x)))
+// 三者的区别:
+#define XNAME(n) xn //XNAME(1)替换成xn
+#define XNAME(n) x#n //XNAME(1)替换成 x&quot;1&quot;
+#define XNAME(n) x##n //XNAME(1)替换成 x1
+#define XNAME(n) x##n##x //XNAME(1)替换成 x1x
+</code></pre>
+<p><code>##</code> 是双目运算符，用于拼接两侧的东西，gcc会检查拼接得到的东西是否是一个合法的 preprocessing token</p>
+<h4 id="变参宏"><a class="header" href="#变参宏">变参宏</a></h4>
+<pre><code class="language-c">#define PR(X, ...) printf(&quot;Message &quot; #X &quot;: &quot; __VA_ARGS__)
+PR(1, &quot;x=%lf\n&quot;, x);
+</code></pre>
+<table><thead><tr><th>预定义宏</th><th>含义</th></tr></thead><tbody>
+<tr><td><code>__DATE__</code></td><td>预处理的日期(&quot;MM DD YYYY&quot;形式的字符串)</td></tr>
+<tr><td><code>__FILE__</code></td><td>当前源代码文件名(字符串)</td></tr>
+<tr><td><code>__LINE__</code></td><td>当前源代码文件中行号(整型)</td></tr>
+<tr><td><code>__STDC__</code></td><td>设置为1, 表明实现遵循C标准</td></tr>
+<tr><td><code>__STDC_HOSTED__</code></td><td>本机环境设置为1, 否则设置为0</td></tr>
+<tr><td><code>__STDC_VERSION__</code></td><td>支持C99标准, 设置为199901L; 支持C11标准, 设置为201112L</td></tr>
+<tr><td><code>__TIME__</code></td><td>翻译代码的时间(&quot;HH:MM:SS&quot;形式的字符串)</td></tr>
+<tr><td><code>__func__</code></td><td>当前函数名</td></tr>
+</tbody></table>
+<pre><code class="language-c">// 重置__LINE__和__FILE__报告的行号和文件名
+#line 100
+#line 200 &quot;cool.c&quot;
+
+// 发出错误消息
+#error Not C11
+
+// 编译指示
+#pragma
+
+// 泛型选择C11
+#define fun(X) \
+    _Generic((X), int : funi, float : funf, double : fund, default : fund)(X)
+
+int funi(int arg) {
+    return arg * 2;
+}
+float funf(float arg) {
+    return arg * 2;
+}
+double fund(double arg) {
+    return arg * 2;
+}
+
+#define show(X) \
+    printf(_Generic((X), int : &quot;%d\n&quot;, float : &quot;%f\n&quot;, double : &quot;%lf\n&quot;), X)
+
+// 内联函数C99
+inline static void fun(){};
+// 内联函数必须具有内部链接, 函数的定义与调用必须在同一文件(可以include)中
+// 内联是建议性的, 编译器可能拒绝
+
+// _Noreturn函数C11, 表明一个函数调用完成后不会返回主调函数
+
+// exit() 和 atexit()
+void clean(void){};
+atexit(clean); // 注册clean函数, 可以注册多个函数(至少32个)
+exit(); // 执行atexit()指定的函数, 执行顺序与添加顺序相反
+
+// 断言库 assert.h
+assert(断言为真的表达式);
+#define NDEBUG // 写在包含assert.h的位置前面, 自动禁用断言
+
+// _Static_assert 编译时断言
+_Static_assert(整型常量表达式, 字符串);
+
+//可变参数 stdarg.h
+...
+</code></pre>
+<hr />
+<h2 id="17-高级数据表示"><a class="header" href="#17-高级数据表示">17 高级数据表示</a></h2>
+<p>...</p>
+<hr />
+<p>建议将含有函数声明的 <code>.h</code> 文件 <code>include</code> 到定义函数的 <code>.c</code> 文件里，这样编译器就能检查声明和定义是否匹配。否则可能在编译和链接阶段 C 编译器都检查不出其不匹配。（对 C 语言来说非常必要，C++ 为了实现重载有 Name Mangling，因此一般能查出问题）</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../c/title.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../c/黑魔法.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../c/title.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../c/黑魔法.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

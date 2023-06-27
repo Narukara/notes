@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基础 - My Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html"><strong aria-hidden="true">1.</strong> readme</a></li><li class="chapter-item "><a href="../c/title.html"><strong aria-hidden="true">2.</strong> C 语言</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c/基础.html"><strong aria-hidden="true">2.1.</strong> 基础</a></li><li class="chapter-item "><a href="../c/黑魔法.html"><strong aria-hidden="true">2.2.</strong> 黑魔法</a></li></ol></li><li class="chapter-item "><a href="../cpp/title.html"><strong aria-hidden="true">3.</strong> C++</a></li><li class="chapter-item "><a href="../Makefile/title.html"><strong aria-hidden="true">4.</strong> Makefile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Makefile/基础.html"><strong aria-hidden="true">4.1.</strong> 基础</a></li></ol></li><li class="chapter-item expanded "><a href="../CMake/title.html"><strong aria-hidden="true">5.</strong> CMake</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../CMake/基础.html" class="active"><strong aria-hidden="true">5.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../Rust/title.html"><strong aria-hidden="true">6.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Rust/工具链.html"><strong aria-hidden="true">6.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../Rust/变量和类型.html"><strong aria-hidden="true">6.2.</strong> 变量和类型</a></li><li class="chapter-item "><a href="../Rust/常用宏.html"><strong aria-hidden="true">6.3.</strong> 常用宏</a></li><li class="chapter-item "><a href="../Rust/语句&函数&注释.html"><strong aria-hidden="true">6.4.</strong> 语句&amp;函数&amp;注释</a></li><li class="chapter-item "><a href="../Rust/所有权和引用.html"><strong aria-hidden="true">6.5.</strong> 所有权和引用</a></li><li class="chapter-item "><a href="../Rust/slice.html"><strong aria-hidden="true">6.6.</strong> slice</a></li><li class="chapter-item "><a href="../Rust/结构体.html"><strong aria-hidden="true">6.7.</strong> 结构体</a></li><li class="chapter-item "><a href="../Rust/枚举.html"><strong aria-hidden="true">6.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../Rust/控制流.html"><strong aria-hidden="true">6.9.</strong> 控制流</a></li><li class="chapter-item "><a href="../Rust/项目管理.html"><strong aria-hidden="true">6.10.</strong> 项目管理</a></li><li class="chapter-item "><a href="../Rust/字符串.html"><strong aria-hidden="true">6.11.</strong> 字符串</a></li><li class="chapter-item "><a href="../Rust/Vec.html"><strong aria-hidden="true">6.12.</strong> Vec</a></li><li class="chapter-item "><a href="../Rust/HashMap.html"><strong aria-hidden="true">6.13.</strong> HashMap</a></li><li class="chapter-item "><a href="../Rust/错误处理.html"><strong aria-hidden="true">6.14.</strong> 错误处理</a></li><li class="chapter-item "><a href="../Rust/泛型.html"><strong aria-hidden="true">6.15.</strong> 泛型</a></li><li class="chapter-item "><a href="../Rust/生命周期.html"><strong aria-hidden="true">6.16.</strong> 生命周期</a></li><li class="chapter-item "><a href="../Rust/Trait.html"><strong aria-hidden="true">6.17.</strong> Trait</a></li><li class="chapter-item "><a href="../Rust/测试.html"><strong aria-hidden="true">6.18.</strong> 测试</a></li><li class="chapter-item "><a href="../Rust/闭包.html"><strong aria-hidden="true">6.19.</strong> 闭包</a></li><li class="chapter-item "><a href="../Rust/迭代器.html"><strong aria-hidden="true">6.20.</strong> 迭代器</a></li><li class="chapter-item "><a href="../Rust/智能指针.html"><strong aria-hidden="true">6.21.</strong> 智能指针</a></li><li class="chapter-item "><a href="../Rust/并发.html"><strong aria-hidden="true">6.22.</strong> 并发</a></li><li class="chapter-item "><a href="../Rust/trait对象.html"><strong aria-hidden="true">6.23.</strong> trait对象</a></li><li class="chapter-item "><a href="../Rust/unsafe.html"><strong aria-hidden="true">6.24.</strong> unsafe</a></li><li class="chapter-item "><a href="../Rust/宏.html"><strong aria-hidden="true">6.25.</strong> 宏</a></li></ol></li><li class="chapter-item "><a href="../Git/title.html"><strong aria-hidden="true">7.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Git/基础.html"><strong aria-hidden="true">7.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../51/title.html"><strong aria-hidden="true">8.</strong> 51单片机</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../51/串行接口.html"><strong aria-hidden="true">8.1.</strong> 串行接口</a></li><li class="chapter-item "><a href="../51/定时器计数器.html"><strong aria-hidden="true">8.2.</strong> 定时器计数器</a></li><li class="chapter-item "><a href="../51/中断.html"><strong aria-hidden="true">8.3.</strong> 中断</a></li><li class="chapter-item "><a href="../51/储存类型.html"><strong aria-hidden="true">8.4.</strong> 储存类型</a></li></ol></li><li class="chapter-item "><a href="../STM32/title.html"><strong aria-hidden="true">9.</strong> STM32</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../STM32/工具链.html"><strong aria-hidden="true">9.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../STM32/启动文件.html"><strong aria-hidden="true">9.2.</strong> 启动文件</a></li><li class="chapter-item "><a href="../STM32/链接脚本.html"><strong aria-hidden="true">9.3.</strong> 连接脚本</a></li><li class="chapter-item "><a href="../STM32/C库.html"><strong aria-hidden="true">9.4.</strong> C 库</a></li><li class="chapter-item "><a href="../STM32/bootloader.html"><strong aria-hidden="true">9.5.</strong> bootloader</a></li><li class="chapter-item "><a href="../STM32/下载和调试.html"><strong aria-hidden="true">9.6.</strong> 下载和调试</a></li></ol></li><li class="chapter-item "><a href="../LVGL/title.html"><strong aria-hidden="true">10.</strong> LVGL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LVGL/移植.html"><strong aria-hidden="true">10.1.</strong> 移植</a></li></ol></li><li class="chapter-item "><a href="../Haskell/title.html"><strong aria-hidden="true">11.</strong> Haskell</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Haskell/函数式基础.html"><strong aria-hidden="true">11.1.</strong> 函数式基础</a></li><li class="chapter-item "><a href="../Haskell/ghci.html"><strong aria-hidden="true">11.2.</strong> ghci</a></li><li class="chapter-item "><a href="../Haskell/类型.html"><strong aria-hidden="true">11.3.</strong> 类型</a></li><li class="chapter-item "><a href="../Haskell/表达式.html"><strong aria-hidden="true">11.4.</strong> 表达式</a></li><li class="chapter-item "><a href="../Haskell/函数.html"><strong aria-hidden="true">11.5.</strong> 函数</a></li><li class="chapter-item "><a href="../Haskell/工具模块和函数.html"><strong aria-hidden="true">11.6.</strong> 工具模块和函数</a></li><li class="chapter-item "><a href="../Haskell/模块.html"><strong aria-hidden="true">11.7.</strong> 模块</a></li></ol></li><li class="chapter-item "><a href="../Verilog/title.html"><strong aria-hidden="true">12.</strong> Verilog</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Verilog/基础.html"><strong aria-hidden="true">12.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../LaTeX/title.html"><strong aria-hidden="true">13.</strong> LaTeX</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LaTeX/基础.html"><strong aria-hidden="true">13.1.</strong> 基础</a></li><li class="chapter-item "><a href="../LaTeX/排版文字.html"><strong aria-hidden="true">13.2.</strong> 排版文字</a></li><li class="chapter-item "><a href="../LaTeX/文档元素.html"><strong aria-hidden="true">13.3.</strong> 文档元素</a></li><li class="chapter-item "><a href="../LaTeX/宏包.html"><strong aria-hidden="true">13.4.</strong> 宏包</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Narukara/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>CMake 自动生成的 Makefile 不仅可以通过 make 命令构建项目生成目标文件，还支持安装（make install）、测试安装的程序是否能正确执行（make test，或者ctest）、生成当前平台的安装包（make  package）、生成源码包（make package_source）、产生 Dashboard 显示数据并上传等高级功能。</p>
+<h2 id="命令行"><a class="header" href="#命令行">命令行</a></h2>
+<ol>
+<li>生成构建系统（生成 Makefile）</li>
+</ol>
+<table><thead><tr><th>参数</th><th>含义</th></tr></thead><tbody>
+<tr><td>-S</td><td>指定源文件根目录，必须包含一个 CMakeLists.txt 文件</td></tr>
+<tr><td>-B</td><td>指定构建目录，构建生成的中间文件和目标文件的生成路径</td></tr>
+<tr><td>-D</td><td>指定变量，格式为-D &lt;var&gt;=&lt;value&gt;，-D后面的空格可以省略</td></tr>
+</tbody></table>
+<pre><code class="language-shell">cmake -B build -D CMAKE_BUILD_TYPE=Debug
+</code></pre>
+<ol start="2">
+<li>执行构建</li>
+</ol>
+<p>可以直接在构建目录下使用 <code>make</code> 命令，或者使用 <code>cmake --build 构建目录</code> 执行构建，常用参数有</p>
+<table><thead><tr><th>参数</th><th>含义</th></tr></thead><tbody>
+<tr><td>--target</td><td>指定构建目标代替默认的构建目标，可以指定多个</td></tr>
+<tr><td>--parallel/-j [&lt;jobs&gt;]</td><td>指定构建目标时使用的进程数</td></tr>
+</tbody></table>
+<h2 id="cmake-语法"><a class="header" href="#cmake-语法">CMake 语法</a></h2>
+<p>CMake的命令有不同类型，包括<strong>脚本命令、项目配置命令和测试命令</strong>，细节可以查看官网<a href="https://link.zhihu.com/?target=https%3A//cmake.org/cmake/help/v3.20/manual/cmake-commands.7.html">cmake-commands</a>。</p>
+<p>CMake语言在项目配置中组织为三种源文件类型：</p>
+<ol>
+<li>目录：CMakeLists.txt，针对的是一个目录，描述如何针对目录（Source tree）生成构建系统，会用到项目配置命令；</li>
+<li>脚本：&lt;script&gt;.cmake，就是一个CMake语言的脚本文件，可使用<code>cmake -P</code>直接执行，只能包含脚本命令；</li>
+<li>模块：&lt;module&gt;.cmake，实现一些模块化的功能，可以被前面两者包含，比如<code>include(CTest)</code>启用测试功能。</li>
+</ol>
+<h3 id="注释"><a class="header" href="#注释">注释</a></h3>
+<pre><code class="language-cmake"># 注释
+#[[
+  注释块
+  注释块
+]]
+</code></pre>
+<h3 id="变量"><a class="header" href="#变量">变量</a></h3>
+<p>使用<code>set</code>和<code>unset</code>命令设置或者取消变量</p>
+<ol>
+<li>一般变量，可以是字符串，数字或者列表</li>
+</ol>
+<pre><code class="language-cmake">set(AUTHOR Tom)
+set(AUTHOR &quot;Tom Cat&quot;)
+set(NUM 30)
+set(ARR to be or)
+set(ARR to;be;or)
+# 引用一般变量：`${&lt;variable&gt;}`，在`if()`条件判断中可以简化为只用变量名`&lt;variable&gt;`
+</code></pre>
+<ol start="2">
+<li>Cache 变量，一般用于提供配置选项，如果用户没有指定，则使用默认值</li>
+</ol>
+<pre><code class="language-cmake"># set(&lt;variable&gt; &lt;value&gt;... CACHE &lt;type&gt; &lt;docstring&gt; [FORCE])
+set(CVAR &quot;Default cache value&quot; CACHE STRING &quot;A sample for cache variable&quot;)
+# 引用 CACHE 变量：$CACHE{&lt;varialbe&gt;}
+# Cache 变量会被保存在构建目录下的 CMakeCache.txt 中，缓存起来之后是不变的，除非重新配置更新
+</code></pre>
+<ol start="3">
+<li>环境变量</li>
+</ol>
+<pre><code class="language-cmake"># 修改当前进程的环境变量，设置和引用格式为：
+set(ENV{&lt;variable&gt;} [&lt;value&gt;])
+$ENV{&lt;varialbe&gt;}
+</code></pre>
+<ol start="4">
+<li>内置变量</li>
+</ol>
+<p><code>CMAKE_</code>、<code>_CMAKE</code>或者以下划线开头后面加上任意 CMake 命令的变量。通过修改这些变量的值来配置 CMake 构建的行为</p>
+<h3 id="条件语句"><a class="header" href="#条件语句">条件语句</a></h3>
+<ol>
+<li>字符串比较，比如：STREQUAL、STRLESS、STRGREATER等；</li>
+<li>数值比较，比如：EQUAL、LESS、GREATER等；</li>
+<li>布尔运算，AND、OR、NOT；</li>
+<li>路径判断，比如：EXISTS、IS_DIRECTORY、IS_ABSOLUTE等；</li>
+<li>版本号判断；等等；</li>
+<li>使用小括号可以组合多个条件语句，比如：(cond1) AND (cond2 OR (cond3))。</li>
+</ol>
+<p>对于常量：</p>
+<ol>
+<li>ON、YES、TRUE、Y和非0值均被视为<code>True</code>；</li>
+<li>0、OFF、NO、FALSE、N、IGNORE、空字符串、NOTFOUND、及以&quot;-NOTFOUND&quot;结尾的字符串均视为<code>False</code>。</li>
+</ol>
+<p>对于变量，只要其值不是常量中为<code>False</code>的情形，则均视为<code>True</code>。</p>
+<pre><code class="language-cmake">set(EMPTY_STR &quot;&quot;)
+if ((NOT EMPTY_STR) AND FLAG AND (NUM LESS 50) AND (NOT NOT_DEFINE_VAR))
+    message(&quot;The first if branch...&quot;)
+elseif (EMPTY_STR)
+    message(&quot;EMPTY_STR is not empty&quot;)
+else ()
+    message(&quot;All other case&quot;)
+endif()
+</code></pre>
+<h3 id="消息打印"><a class="header" href="#消息打印">消息打印</a></h3>
+<pre><code class="language-cmake">message([&lt;mode&gt;] &quot;message text&quot; ...)
+</code></pre>
+<table><thead><tr><th>信息等级 &lt;mode&gt;</th><th>说明</th></tr></thead><tbody>
+<tr><td>空或者<code>NOTICE</code></td><td>比较重要的信息</td></tr>
+<tr><td>DEBUG</td><td>调试信息，主要针对开发者</td></tr>
+<tr><td>STATUS</td><td>项目使用者可能比较关心的信息，比如提示当前使用的编译器</td></tr>
+<tr><td>WARNING</td><td>CMake警告，不会打断进程</td></tr>
+<tr><td>SEND_ERROR</td><td>CMake错误，会继续执行，但是会跳过生成构建系统</td></tr>
+<tr><td>FATAL_ERROR</td><td>CMake致命错误，会终止进程</td></tr>
+</tbody></table>
+<h3 id="列表操作"><a class="header" href="#列表操作">列表操作</a></h3>
+<p><code>list</code> 命令用于列表操作，有很多子命令：</p>
+<ol>
+<li><code>APPEND</code>，往列表中添加元素；</li>
+<li><code>LENGTH</code>，获取列表元素个数；</li>
+<li><code>JOIN</code>，将列表元素用指定的分隔符连接起来；</li>
+</ol>
+<h3 id="文件操作"><a class="header" href="#文件操作">文件操作</a></h3>
+<p><code>file</code> 命令用于文件操作，有很多子命令，可以读写、创建或复制文件和目录、计算文件hash、下载文件、压缩文件、递归查找文件等</p>
+<pre><code class="language-cmake"># 查找 src/ 下所有 .c 文件
+file(GLOB_RECURSE ALL_SRC src/*.c)
+# 或者
+aux_source_directory(src ALL_SRC)
+</code></pre>
+<h3 id="配置文件生成"><a class="header" href="#配置文件生成">配置文件生成</a></h3>
+<p>使用 <code>configure_file</code> 命令可以将 配置文件模板 中的特定内容替换，生成 目标文件。 输入文件中的<code>@VAR@</code>或者<code>${VAR}</code>在输出文件中将被对应的变量值替换。</p>
+<p>例如有配置文件模板 <code>version.h.in</code></p>
+<pre><code class="language-c">#define VERSION &quot;@VERSION@&quot;
+</code></pre>
+<p>执行 CMake 脚本</p>
+<pre><code class="language-cmake">set(VERSION 1.0.0)
+configure_file(version.h.in &quot;${PROJECT_SOURCE_DIR}/version.h&quot;)
+</code></pre>
+<p>得到 <code>version.h</code></p>
+<pre><code class="language-c">#define VERSION &quot;1.0.0&quot;
+</code></pre>
+<h3 id="执行系统命令"><a class="header" href="#执行系统命令">执行系统命令</a></h3>
+<pre><code class="language-cmake">execute_process(COMMAND bash &quot;-c&quot; &quot;git rev-parse --short HEAD&quot; OUTPUT_VARIABLE COMMIT_ID)
+</code></pre>
+<h3 id="查找库文件"><a class="header" href="#查找库文件">查找库文件</a></h3>
+<pre><code class="language-cmake">find_library(&lt;VAR&gt; name1 [path1 path2 ...])
+</code></pre>
+<p>找到的库就可以被其他target使用，表明依赖关系。</p>
+<h3 id="导入其他模块"><a class="header" href="#导入其他模块">导入其他模块</a></h3>
+<pre><code class="language-cmake">include(CTest) # 将cmake文件或者模块加载并执行
+</code></pre>
+<p>CMake自带有很多有用的模块，官网链接：<a href="https://cmake.org/cmake/help/latest/manual/cmake-modules.7.html">cmake-modules</a></p>
+<h2 id="项目配置"><a class="header" href="#项目配置">项目配置</a></h2>
+<h3 id="设置项目名称版本号"><a class="header" href="#设置项目名称版本号">设置项目名称&amp;版本号</a></h3>
+<pre><code class="language-cmake">project(CMakeTemplate VERSION 1.0.0 LANGUAGES C CXX)
+</code></pre>
+<p>CMake 会将版本号各值（major.minor.patch.tweak）分别赋值给以下变量</p>
+<pre><code class="language-cmake">PROJECT_VERSION, &lt;PROJECT-NAME&gt;_VERSION
+PROJECT_VERSION_MAJOR, &lt;PROJECT-NAME&gt;_VERSION_MAJOR
+PROJECT_VERSION_MINOR, &lt;PROJECT-NAME&gt;_VERSION_MINOR
+PROJECT_VERSION_PATCH, &lt;PROJECT-NAME&gt;_VERSION_PATCH
+PROJECT_VERSION_TWEAK, &lt;PROJECT-NAME&gt;_VERSION_TWEAK
+</code></pre>
+<p>配合 <code>configure_file</code> 命令，可以方便地在代码中得到版本信息</p>
+<h3 id="指定cc标准"><a class="header" href="#指定cc标准">指定C/C++标准</a></h3>
+<pre><code class="language-cmake">set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
+</code></pre>
+<h3 id="编译选项编译类型"><a class="header" href="#编译选项编译类型">编译选项&amp;编译类型</a></h3>
+<pre><code class="language-cmake">add_compile_options(-Wall -Wextra -pedantic -Werror)		# 为所有编译器配置编译选项
+set(CMAKE_C_FLAGS &quot;${CMAKE_C_FLAGS} -pipe -std=c99&quot;)		# 为 c 编译器配置
+set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -pipe -std=c++11&quot;)	# 为 c++ 编译器配置
+</code></pre>
+<p>通过设置变量<code>CMAKE_BUILD_TYPE</code>来配置编译类型，可设置为：<code>Debug</code>、<code>Release</code>、<code>RelWithDebInfo</code>、<code>MinSizeRel</code>。一般在执行<code>cmake</code>命令的时候通过参数<code>-D</code>指定</p>
+<p>可以针对不同的编译类型设置不同的编译选项，例如：</p>
+<pre><code class="language-cmake">set(CMAKE_C_FLAGS_DEBUG &quot;${CMAKE_C_FLAGS_DEBUG} -g -O0&quot;)
+set(CMAKE_C_FLAGS_RELEASE &quot;${CMAKE_C_FLAGS_RELEASE} -O2&quot;)
+</code></pre>
+<h3 id="宏定义"><a class="header" href="#宏定义">宏定义</a></h3>
+<p>添加全局的宏定义</p>
+<pre><code class="language-cmake">add_definitions(-DDEBUG -DREAL_COOL_ENGINEER)
+</code></pre>
+<h3 id="添加-include-目录"><a class="header" href="#添加-include-目录">添加 include 目录</a></h3>
+<p>添加头文件的搜索目录</p>
+<pre><code class="language-cmake">include_directories(src/c)
+</code></pre>
+<h3 id="设置编译目标"><a class="header" href="#设置编译目标">设置编译目标</a></h3>
+<p>编译目标 (target) 的类型包括静态库、动态库和可执行文件</p>
+<ol>
+<li>编译为静态/动态库</li>
+</ol>
+<p>使用命令 <code>add_library(库名称 STATIC 所有源文件)</code> 编译静态库，例如</p>
+<pre><code class="language-cmake">file(GLOB_RECURSE MATH_SRC components/math/*.c)
+add_library(math STATIC ${MATH_SRC})
+</code></pre>
+<p>指定为<code>SHARED</code>则编译为动态库</p>
+<ol start="2">
+<li>编译为可执行文件</li>
+</ol>
+<pre><code class="language-cmake">add_executable(demo main/main.c)	# (名称 所有源文件)
+target_link_libraries(demo math)	# 指定依赖的库
+</code></pre>
+<h3 id="安装打包测试"><a class="header" href="#安装打包测试">安装&amp;打包&amp;测试</a></h3>
+<p>https://zhuanlan.zhihu.com/p/371257515</p>
+<h2 id="模块化构建"><a class="header" href="#模块化构建">模块化构建</a></h2>
+<p><code>CMakeLists.txt</code>定义一个目录的构建系统。模块化构建就是分别为每一个子模块目录编写一个<code>CMakeLists.txt</code>，在父目录中导入子目录的构建系统的生成目标，以便在父目录中使用。</p>
+<ol>
+<li>在子模块目录编写 <code>CMakeLists.txt</code>，目标设置为静态库</li>
+<li>在父目录中导入子模块</li>
+</ol>
+<pre><code class="language-cmake">add_subdirectory(components/math)	# 导入子模块
+add_executable(demo main/main.c)	# 顶层目标
+target_link_libraries(demo math)	# 指定依赖的库（子模块）
+</code></pre>
+<blockquote>
+<p>通常，用 add_subdirectory 导入的子模块在项目的子目录下，例如子模块在 <code>components/math</code> 下，那么编译产生的文件放在 <code>build/components/math</code> 下。如果子模块在项目外，就需要自行指定在 <code>build</code> 下存放的位置：</p>
+<pre><code class="language-cmake">add_subdirectory(source_dir [binary_dir] [EXCLUDE_FROM_ALL])
+</code></pre>
+</blockquote>
+<p>另外，也可以直接导入已编译好的目标文件：</p>
+<pre><code class="language-cmake">add_library(math STATIC IMPORTED)
+set_property(TARGET math PROPERTY IMPORTED_LOCATION &quot;./lib/libmath.a&quot;)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../CMake/title.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../Rust/title.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../CMake/title.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../Rust/title.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

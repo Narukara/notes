@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基础 - My Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html"><strong aria-hidden="true">1.</strong> readme</a></li><li class="chapter-item "><a href="../c/title.html"><strong aria-hidden="true">2.</strong> C 语言</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c/基础.html"><strong aria-hidden="true">2.1.</strong> 基础</a></li><li class="chapter-item "><a href="../c/黑魔法.html"><strong aria-hidden="true">2.2.</strong> 黑魔法</a></li></ol></li><li class="chapter-item "><a href="../cpp/title.html"><strong aria-hidden="true">3.</strong> C++</a></li><li class="chapter-item expanded "><a href="../Makefile/title.html"><strong aria-hidden="true">4.</strong> Makefile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Makefile/基础.html" class="active"><strong aria-hidden="true">4.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../CMake/title.html"><strong aria-hidden="true">5.</strong> CMake</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CMake/基础.html"><strong aria-hidden="true">5.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../Rust/title.html"><strong aria-hidden="true">6.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Rust/工具链.html"><strong aria-hidden="true">6.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../Rust/变量和类型.html"><strong aria-hidden="true">6.2.</strong> 变量和类型</a></li><li class="chapter-item "><a href="../Rust/常用宏.html"><strong aria-hidden="true">6.3.</strong> 常用宏</a></li><li class="chapter-item "><a href="../Rust/语句&函数&注释.html"><strong aria-hidden="true">6.4.</strong> 语句&amp;函数&amp;注释</a></li><li class="chapter-item "><a href="../Rust/所有权和引用.html"><strong aria-hidden="true">6.5.</strong> 所有权和引用</a></li><li class="chapter-item "><a href="../Rust/slice.html"><strong aria-hidden="true">6.6.</strong> slice</a></li><li class="chapter-item "><a href="../Rust/结构体.html"><strong aria-hidden="true">6.7.</strong> 结构体</a></li><li class="chapter-item "><a href="../Rust/枚举.html"><strong aria-hidden="true">6.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../Rust/控制流.html"><strong aria-hidden="true">6.9.</strong> 控制流</a></li><li class="chapter-item "><a href="../Rust/项目管理.html"><strong aria-hidden="true">6.10.</strong> 项目管理</a></li><li class="chapter-item "><a href="../Rust/字符串.html"><strong aria-hidden="true">6.11.</strong> 字符串</a></li><li class="chapter-item "><a href="../Rust/Vec.html"><strong aria-hidden="true">6.12.</strong> Vec</a></li><li class="chapter-item "><a href="../Rust/HashMap.html"><strong aria-hidden="true">6.13.</strong> HashMap</a></li><li class="chapter-item "><a href="../Rust/错误处理.html"><strong aria-hidden="true">6.14.</strong> 错误处理</a></li><li class="chapter-item "><a href="../Rust/泛型.html"><strong aria-hidden="true">6.15.</strong> 泛型</a></li><li class="chapter-item "><a href="../Rust/生命周期.html"><strong aria-hidden="true">6.16.</strong> 生命周期</a></li><li class="chapter-item "><a href="../Rust/Trait.html"><strong aria-hidden="true">6.17.</strong> Trait</a></li><li class="chapter-item "><a href="../Rust/测试.html"><strong aria-hidden="true">6.18.</strong> 测试</a></li><li class="chapter-item "><a href="../Rust/闭包.html"><strong aria-hidden="true">6.19.</strong> 闭包</a></li><li class="chapter-item "><a href="../Rust/迭代器.html"><strong aria-hidden="true">6.20.</strong> 迭代器</a></li><li class="chapter-item "><a href="../Rust/智能指针.html"><strong aria-hidden="true">6.21.</strong> 智能指针</a></li><li class="chapter-item "><a href="../Rust/并发.html"><strong aria-hidden="true">6.22.</strong> 并发</a></li><li class="chapter-item "><a href="../Rust/trait对象.html"><strong aria-hidden="true">6.23.</strong> trait对象</a></li><li class="chapter-item "><a href="../Rust/unsafe.html"><strong aria-hidden="true">6.24.</strong> unsafe</a></li><li class="chapter-item "><a href="../Rust/宏.html"><strong aria-hidden="true">6.25.</strong> 宏</a></li></ol></li><li class="chapter-item "><a href="../Git/title.html"><strong aria-hidden="true">7.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Git/基础.html"><strong aria-hidden="true">7.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../51/title.html"><strong aria-hidden="true">8.</strong> 51单片机</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../51/串行接口.html"><strong aria-hidden="true">8.1.</strong> 串行接口</a></li><li class="chapter-item "><a href="../51/定时器计数器.html"><strong aria-hidden="true">8.2.</strong> 定时器计数器</a></li><li class="chapter-item "><a href="../51/中断.html"><strong aria-hidden="true">8.3.</strong> 中断</a></li><li class="chapter-item "><a href="../51/储存类型.html"><strong aria-hidden="true">8.4.</strong> 储存类型</a></li></ol></li><li class="chapter-item "><a href="../STM32/title.html"><strong aria-hidden="true">9.</strong> STM32</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../STM32/工具链.html"><strong aria-hidden="true">9.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../STM32/启动文件.html"><strong aria-hidden="true">9.2.</strong> 启动文件</a></li><li class="chapter-item "><a href="../STM32/链接脚本.html"><strong aria-hidden="true">9.3.</strong> 连接脚本</a></li><li class="chapter-item "><a href="../STM32/C库.html"><strong aria-hidden="true">9.4.</strong> C 库</a></li><li class="chapter-item "><a href="../STM32/bootloader.html"><strong aria-hidden="true">9.5.</strong> bootloader</a></li><li class="chapter-item "><a href="../STM32/下载和调试.html"><strong aria-hidden="true">9.6.</strong> 下载和调试</a></li></ol></li><li class="chapter-item "><a href="../LVGL/title.html"><strong aria-hidden="true">10.</strong> LVGL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LVGL/移植.html"><strong aria-hidden="true">10.1.</strong> 移植</a></li></ol></li><li class="chapter-item "><a href="../Haskell/title.html"><strong aria-hidden="true">11.</strong> Haskell</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Haskell/函数式基础.html"><strong aria-hidden="true">11.1.</strong> 函数式基础</a></li><li class="chapter-item "><a href="../Haskell/ghci.html"><strong aria-hidden="true">11.2.</strong> ghci</a></li><li class="chapter-item "><a href="../Haskell/类型.html"><strong aria-hidden="true">11.3.</strong> 类型</a></li><li class="chapter-item "><a href="../Haskell/表达式.html"><strong aria-hidden="true">11.4.</strong> 表达式</a></li><li class="chapter-item "><a href="../Haskell/函数.html"><strong aria-hidden="true">11.5.</strong> 函数</a></li><li class="chapter-item "><a href="../Haskell/工具模块和函数.html"><strong aria-hidden="true">11.6.</strong> 工具模块和函数</a></li><li class="chapter-item "><a href="../Haskell/模块.html"><strong aria-hidden="true">11.7.</strong> 模块</a></li></ol></li><li class="chapter-item "><a href="../Verilog/title.html"><strong aria-hidden="true">12.</strong> Verilog</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Verilog/基础.html"><strong aria-hidden="true">12.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../LaTeX/title.html"><strong aria-hidden="true">13.</strong> LaTeX</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LaTeX/基础.html"><strong aria-hidden="true">13.1.</strong> 基础</a></li><li class="chapter-item "><a href="../LaTeX/排版文字.html"><strong aria-hidden="true">13.2.</strong> 排版文字</a></li><li class="chapter-item "><a href="../LaTeX/文档元素.html"><strong aria-hidden="true">13.3.</strong> 文档元素</a></li><li class="chapter-item "><a href="../LaTeX/宏包.html"><strong aria-hidden="true">13.4.</strong> 宏包</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Narukara/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>Makefile文件由一系列规则 (rules) 构成, 每条规则的形式如下</p>
+<pre><code class="language-makefile">&lt;目标&gt; : &lt;前置条件&gt;
+[tab]&lt;命令&gt;
+</code></pre>
+<p>目标是必须的, 前置条件和命令是可选的, 但是两者之中至少存在一个</p>
+<hr />
+<h2 id="目标-target"><a class="header" href="#目标-target">目标 target</a></h2>
+<p>目标通常是文件名, 可以是一个或多个文件名(空格分隔), 也可以是某个操作的名字(伪目标)</p>
+<p>为了避免操作名和已存在的文件名冲突, 可以将其声明为伪目标:</p>
+<pre><code class="language-makefile">.PHONY: clean
+clean:
+	rm *.o temp
+</code></pre>
+<p>如果make命令运行时没有指定目标, 默认执行第一个目标</p>
+<hr />
+<h2 id="前置条件-prerequisites"><a class="header" href="#前置条件-prerequisites">前置条件 prerequisites</a></h2>
+<p>前置条件通常是一组文件名(空格分隔), 只要有一个前置文件不存在, 或者有过更新, 目标就需要重新构建</p>
+<p>如果一个文件没有前置条件, 那么这个文件不存在时, make会调用命令(哪怕这个命令并不会实际构建出这个文件), 这个文件存在时, make就不会执行任何操作</p>
+<hr />
+<h2 id="命令-commands"><a class="header" href="#命令-commands">命令 commands</a></h2>
+<p>命令由一行或多行shell命令组成, 每行命令之前必须有一个[tab]键</p>
+<hr />
+<h2 id="变量和赋值"><a class="header" href="#变量和赋值">变量和赋值</a></h2>
+<pre><code class="language-makefile"># 递归扩展变量，用 = 赋值
+a = hello
+b = $(a)
+a = world
+# 此时 $(b) 为 world
+
+# 简单扩展变量，用 := 赋值
+a := hello
+b := $(a)
+a := world
+# 此时 $(b) 为 hello
+
+# 条件赋值 ?=
+# 仅当该变量尚未定义时，进行赋值
+a = hello
+a ?= world
+b ?= world
+
+# 追加赋值 +=
+a := hello
+a += world
+</code></pre>
+<table><thead><tr><th>自动变量</th><th>含义</th></tr></thead><tbody>
+<tr><td><code>$@</code></td><td>当前目标</td></tr>
+<tr><td><code>$&lt;</code></td><td>第一个前置条件</td></tr>
+<tr><td><code>$^</code></td><td>所有前置条件</td></tr>
+<tr><td><code>$?</code></td><td>比目标更新的所有前置条件</td></tr>
+<tr><td>...</td><td>...</td></tr>
+</tbody></table>
+<hr />
+<h2 id="模式匹配"><a class="header" href="#模式匹配">模式匹配</a></h2>
+<pre><code class="language-makefile">allout = a.o b.o c.o
+
+target : $(allout)
+	gcc -o $@ $^
+
+%.o : %.c
+	gcc -o $@ -c $^
+</code></pre>
+<p>如以上代码所示，每次取出 allout 中的一个，匹配到 %.o 规则并构建</p>
+<hr />
+<h2 id="函数"><a class="header" href="#函数">函数</a></h2>
+<pre><code class="language-makefile">a = *.c
+# a 的值为 *.c ，并不会匹配和展开
+
+a = $(wildcard *.c)
+# 使用 wildcard 函数展开
+
+b = $(patsubst %.c, %.o, $(a))
+# patsubst 函数用于匹配和替换
+
+c = $(addprefix app/, $(a))
+# 给字符串中每个子串添加前缀
+
+d = $(filter %.c, $(a))
+# 滤出满足模式的字符串
+
+e = $(filter-out %.c, $(a))
+# 滤除满足模式的字符串
+</code></pre>
+<hr />
+<h2 id="条件语法"><a class="header" href="#条件语法">条件语法</a></h2>
+<p>条件判断有<code>ifdef</code>, <code>ifndef</code>, <code>ifeq</code>, <code>ifneq</code></p>
+<pre><code class="language-makefile">ifdef foo
+	...
+else ifeq ($(a), hello)
+	...
+else
+	...
+endif
+</code></pre>
+<hr />
+<h2 id="其他"><a class="header" href="#其他">其他</a></h2>
+<p>以#开头表示注释</p>
+<p>make会打印每条命令和注释再执行, 也叫回声(echoing), 用@开头的行关闭回声</p>
+<h3 id="oneshell"><a class="header" href="#oneshell">ONESHELL</a></h3>
+<p>默认情况下, 每行命令在各自单独的shell中执行, 要使两行命令在同一个shell中执行, 有两种方法:</p>
+<ol>
+<li>将两行命令写在一行(也可以写在两行, 在换行符前加反斜杠转义), 中间用分号分隔</li>
+<li>加上<code>.ONESHELL:</code>命令</li>
+</ol>
+<pre><code class="language-makefile">test1 :
+	export foo=bar; echo &quot;foo=[$$foo]&quot;
+	
+test2 :
+	export foo=bar;\
+	echo &quot;foo=[$$foo]&quot;
+	
+.ONESHELL:
+test3 : 
+	export foo=bar
+	echo &quot;foo=[$$foo]&quot;
+</code></pre>
+<h3 id="override"><a class="header" href="#override">override</a></h3>
+<p>调用make时，可以指定和覆盖Makefile内变量值</p>
+<pre><code class="language-shell">$ make a=haha b=lala
+</code></pre>
+<p>若想避免被覆盖，可以在定义变量时加上override指令</p>
+<pre><code class="language-makefile">override a = hello
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Makefile/title.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../CMake/title.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Makefile/title.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../CMake/title.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

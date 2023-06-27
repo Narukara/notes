@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>工具链 - My Notes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html"><strong aria-hidden="true">1.</strong> readme</a></li><li class="chapter-item "><a href="../c/title.html"><strong aria-hidden="true">2.</strong> C 语言</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../c/基础.html"><strong aria-hidden="true">2.1.</strong> 基础</a></li><li class="chapter-item "><a href="../c/黑魔法.html"><strong aria-hidden="true">2.2.</strong> 黑魔法</a></li></ol></li><li class="chapter-item "><a href="../cpp/title.html"><strong aria-hidden="true">3.</strong> C++</a></li><li class="chapter-item "><a href="../Makefile/title.html"><strong aria-hidden="true">4.</strong> Makefile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Makefile/基础.html"><strong aria-hidden="true">4.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../CMake/title.html"><strong aria-hidden="true">5.</strong> CMake</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CMake/基础.html"><strong aria-hidden="true">5.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../Rust/title.html"><strong aria-hidden="true">6.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Rust/工具链.html"><strong aria-hidden="true">6.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../Rust/变量和类型.html"><strong aria-hidden="true">6.2.</strong> 变量和类型</a></li><li class="chapter-item "><a href="../Rust/常用宏.html"><strong aria-hidden="true">6.3.</strong> 常用宏</a></li><li class="chapter-item "><a href="../Rust/语句&函数&注释.html"><strong aria-hidden="true">6.4.</strong> 语句&amp;函数&amp;注释</a></li><li class="chapter-item "><a href="../Rust/所有权和引用.html"><strong aria-hidden="true">6.5.</strong> 所有权和引用</a></li><li class="chapter-item "><a href="../Rust/slice.html"><strong aria-hidden="true">6.6.</strong> slice</a></li><li class="chapter-item "><a href="../Rust/结构体.html"><strong aria-hidden="true">6.7.</strong> 结构体</a></li><li class="chapter-item "><a href="../Rust/枚举.html"><strong aria-hidden="true">6.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../Rust/控制流.html"><strong aria-hidden="true">6.9.</strong> 控制流</a></li><li class="chapter-item "><a href="../Rust/项目管理.html"><strong aria-hidden="true">6.10.</strong> 项目管理</a></li><li class="chapter-item "><a href="../Rust/字符串.html"><strong aria-hidden="true">6.11.</strong> 字符串</a></li><li class="chapter-item "><a href="../Rust/Vec.html"><strong aria-hidden="true">6.12.</strong> Vec</a></li><li class="chapter-item "><a href="../Rust/HashMap.html"><strong aria-hidden="true">6.13.</strong> HashMap</a></li><li class="chapter-item "><a href="../Rust/错误处理.html"><strong aria-hidden="true">6.14.</strong> 错误处理</a></li><li class="chapter-item "><a href="../Rust/泛型.html"><strong aria-hidden="true">6.15.</strong> 泛型</a></li><li class="chapter-item "><a href="../Rust/生命周期.html"><strong aria-hidden="true">6.16.</strong> 生命周期</a></li><li class="chapter-item "><a href="../Rust/Trait.html"><strong aria-hidden="true">6.17.</strong> Trait</a></li><li class="chapter-item "><a href="../Rust/测试.html"><strong aria-hidden="true">6.18.</strong> 测试</a></li><li class="chapter-item "><a href="../Rust/闭包.html"><strong aria-hidden="true">6.19.</strong> 闭包</a></li><li class="chapter-item "><a href="../Rust/迭代器.html"><strong aria-hidden="true">6.20.</strong> 迭代器</a></li><li class="chapter-item "><a href="../Rust/智能指针.html"><strong aria-hidden="true">6.21.</strong> 智能指针</a></li><li class="chapter-item "><a href="../Rust/并发.html"><strong aria-hidden="true">6.22.</strong> 并发</a></li><li class="chapter-item "><a href="../Rust/trait对象.html"><strong aria-hidden="true">6.23.</strong> trait对象</a></li><li class="chapter-item "><a href="../Rust/unsafe.html"><strong aria-hidden="true">6.24.</strong> unsafe</a></li><li class="chapter-item "><a href="../Rust/宏.html"><strong aria-hidden="true">6.25.</strong> 宏</a></li></ol></li><li class="chapter-item "><a href="../Git/title.html"><strong aria-hidden="true">7.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Git/基础.html"><strong aria-hidden="true">7.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../51/title.html"><strong aria-hidden="true">8.</strong> 51单片机</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../51/串行接口.html"><strong aria-hidden="true">8.1.</strong> 串行接口</a></li><li class="chapter-item "><a href="../51/定时器计数器.html"><strong aria-hidden="true">8.2.</strong> 定时器计数器</a></li><li class="chapter-item "><a href="../51/中断.html"><strong aria-hidden="true">8.3.</strong> 中断</a></li><li class="chapter-item "><a href="../51/储存类型.html"><strong aria-hidden="true">8.4.</strong> 储存类型</a></li></ol></li><li class="chapter-item expanded "><a href="../STM32/title.html"><strong aria-hidden="true">9.</strong> STM32</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../STM32/工具链.html" class="active"><strong aria-hidden="true">9.1.</strong> 工具链</a></li><li class="chapter-item "><a href="../STM32/启动文件.html"><strong aria-hidden="true">9.2.</strong> 启动文件</a></li><li class="chapter-item "><a href="../STM32/链接脚本.html"><strong aria-hidden="true">9.3.</strong> 连接脚本</a></li><li class="chapter-item "><a href="../STM32/C库.html"><strong aria-hidden="true">9.4.</strong> C 库</a></li><li class="chapter-item "><a href="../STM32/bootloader.html"><strong aria-hidden="true">9.5.</strong> bootloader</a></li><li class="chapter-item "><a href="../STM32/下载和调试.html"><strong aria-hidden="true">9.6.</strong> 下载和调试</a></li></ol></li><li class="chapter-item "><a href="../LVGL/title.html"><strong aria-hidden="true">10.</strong> LVGL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LVGL/移植.html"><strong aria-hidden="true">10.1.</strong> 移植</a></li></ol></li><li class="chapter-item "><a href="../Haskell/title.html"><strong aria-hidden="true">11.</strong> Haskell</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Haskell/函数式基础.html"><strong aria-hidden="true">11.1.</strong> 函数式基础</a></li><li class="chapter-item "><a href="../Haskell/ghci.html"><strong aria-hidden="true">11.2.</strong> ghci</a></li><li class="chapter-item "><a href="../Haskell/类型.html"><strong aria-hidden="true">11.3.</strong> 类型</a></li><li class="chapter-item "><a href="../Haskell/表达式.html"><strong aria-hidden="true">11.4.</strong> 表达式</a></li><li class="chapter-item "><a href="../Haskell/函数.html"><strong aria-hidden="true">11.5.</strong> 函数</a></li><li class="chapter-item "><a href="../Haskell/工具模块和函数.html"><strong aria-hidden="true">11.6.</strong> 工具模块和函数</a></li><li class="chapter-item "><a href="../Haskell/模块.html"><strong aria-hidden="true">11.7.</strong> 模块</a></li></ol></li><li class="chapter-item "><a href="../Verilog/title.html"><strong aria-hidden="true">12.</strong> Verilog</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Verilog/基础.html"><strong aria-hidden="true">12.1.</strong> 基础</a></li></ol></li><li class="chapter-item "><a href="../LaTeX/title.html"><strong aria-hidden="true">13.</strong> LaTeX</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../LaTeX/基础.html"><strong aria-hidden="true">13.1.</strong> 基础</a></li><li class="chapter-item "><a href="../LaTeX/排版文字.html"><strong aria-hidden="true">13.2.</strong> 排版文字</a></li><li class="chapter-item "><a href="../LaTeX/文档元素.html"><strong aria-hidden="true">13.3.</strong> 文档元素</a></li><li class="chapter-item "><a href="../LaTeX/宏包.html"><strong aria-hidden="true">13.4.</strong> 宏包</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">My Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Narukara/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="工具链"><a class="header" href="#工具链">工具链</a></h2>
+<ul>
+<li>GNU 的 GCC for ARM</li>
+<li>ARM 的 armcc ( KEIL附带, 有限制, 需要license)</li>
+</ul>
+<h3 id="gnu-gcc-for-arm"><a class="header" href="#gnu-gcc-for-arm">GNU GCC for ARM</a></h3>
+<p>文档: https://gcc.gnu.org/onlinedocs/gcc/</p>
+<table><thead><tr><th>工具 arm-none-eabi-</th><th>用途</th></tr></thead><tbody>
+<tr><td>gcc</td><td>编译、链接、汇编</td></tr>
+<tr><td>ld</td><td>链接</td></tr>
+<tr><td>as</td><td>汇编</td></tr>
+<tr><td>objdump / readelf / nm</td><td>ELF 文件分析</td></tr>
+<tr><td>objcopy</td><td>格式转换</td></tr>
+</tbody></table>
+<h3 id="编译流程"><a class="header" href="#编译流程">编译流程</a></h3>
+<ol>
+<li>main.c -&gt; 预处理 -&gt; main.i -&gt; 编译 -&gt; main.s -&gt; 汇编 -&gt; main.o (可重定位目标文件, 不包含任何绝对地址, elf格式)</li>
+<li>所有.o文件, .a库文件 -&gt; 链接 -&gt; main.elf</li>
+<li>main.elf -&gt; objcopy -&gt; .ihex .bin 文件</li>
+</ol>
+<h3 id="arm-none-eabi-gcc-编译"><a class="header" href="#arm-none-eabi-gcc-编译">arm-none-eabi-gcc 编译</a></h3>
+<table><thead><tr><th>选项</th><th>说明</th></tr></thead><tbody>
+<tr><td>-c</td><td>只编译到.o, 不链接</td></tr>
+<tr><td>-S</td><td>只编译到.s</td></tr>
+<tr><td>-march / -mtune / -mcpu</td><td>指定目标架构/CPU</td></tr>
+<tr><td>-mthumb / -marm</td><td>使用 thumb 或 arm 指令集</td></tr>
+<tr><td>-mfloat-abi</td><td>指定浮点数的处理方法, 选项有 soft softfp hard, 一般会根据目标自动选定</td></tr>
+<tr><td>-std</td><td>指定C语言标准</td></tr>
+<tr><td>-Wall</td><td>启用所有被认为与用相关的警告</td></tr>
+<tr><td>-Wextra</td><td>启用一些 -Wall 未启用的警告</td></tr>
+<tr><td>-g</td><td>生成调试信息</td></tr>
+<tr><td>-O</td><td>指定优化等级</td></tr>
+</tbody></table>
+<p>例</p>
+<pre><code class="language-shell">arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -std=gnu17 -c main.c -o main.o
+</code></pre>
+<h3 id="arm-none-eabi-gcc-链接"><a class="header" href="#arm-none-eabi-gcc-链接">arm-none-eabi-gcc 链接</a></h3>
+<table><thead><tr><th>选项</th><th>说明</th></tr></thead><tbody>
+<tr><td>-T</td><td>指定链接脚本</td></tr>
+<tr><td>-Wl,-Map=xxx</td><td>输出map文件, 前面的 -Wl 用于指明这是一个链接参数</td></tr>
+<tr><td>-nostdlib</td><td>不使用任何标准库</td></tr>
+<tr><td>-specs=xxx</td><td>指定使用的 specs 文件, 进而指定要链接的库</td></tr>
+<tr><td>-specs=nano.specs</td><td>使用 newlib_nano 库, 否则默认使用 newlib 库.<br />nano 库程序体积小, 功能略弱 (如浮点相关). 库中有一些桩函数 (stub), 需要自己实现, 如 _write 等</td></tr>
+<tr><td>-specs=nosys.specs</td><td>使用空的桩函数, 无需自己打桩, 但是会导致一些库函数, 如 printf 不能正常使用</td></tr>
+</tbody></table>
+<h3 id="elf-文件分析"><a class="header" href="#elf-文件分析">elf 文件分析</a></h3>
+<p>Executable and Linkable Format
+由 GNU 工具链使用的格式，其他工具链有别的格式
+.o 和 .elf 文件均是这种格式</p>
+<ol>
+<li>读取各段和大小等信息</li>
+</ol>
+<pre><code class="language-shell">&gt; arm-none-eabi-objdump -h main.o
+
+main.o:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000520  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000001  00000000  00000000  00000554  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000054  00000000  00000000  00000558  2**2
+                  ALLOC
+  3 .rodata       000000c9  00000000  00000000  00000558  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .comment      0000001f  00000000  00000000  00000621  2**0
+                  CONTENTS, READONLY
+  5 .ARM.attributes 0000002d  00000000  00000000  00000640  2**0
+                  CONTENTS, READONLY
+</code></pre>
+<ol start="2">
+<li>查看各段反汇编</li>
+</ol>
+<pre><code class="language-shell">&gt; arm-none-eabi-objdump -D main.o
+</code></pre>
+<ol start="3">
+<li>直接查看各段内容</li>
+</ol>
+<pre><code class="language-shell">&gt; arm-none-eabi-objdump -s main.o
+</code></pre>
+<p>在 .o 文件中, 各段 (起始地址) 都被定位到 0 . 在之后的链接阶段会被重定位.</p>
+<h3 id="arm-none-eabi-nm"><a class="header" href="#arm-none-eabi-nm">arm-none-eabi-nm</a></h3>
+<p>用于查看文件中的符号</p>
+<pre><code class="language-shell">arm-none-eabi-nm target.elf
+</code></pre>
+<h3 id="arm-none-eabi-size"><a class="header" href="#arm-none-eabi-size">arm-none-eabi-size</a></h3>
+<p>注意：</p>
+<ul>
+<li>链接文件里给堆栈预留的大小似乎会算进 bss 大小里。</li>
+<li>中断向量似乎会算进 data 大小里</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../STM32/title.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../STM32/启动文件.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../STM32/title.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../STM32/启动文件.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
