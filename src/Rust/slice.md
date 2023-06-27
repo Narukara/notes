@@ -29,6 +29,6 @@ let hello = &s[0..5];
 let world = &s[6..];
 ```
 
-<img src=".assets/image-20221212224345186.png" alt="image-20221212224345186" style="zoom:67%;" />
+<img src="Rust/.assets/image-20221212224345186.png" alt="image-20221212224345186" style="zoom:67%;" />
 
 slice 对象包含首元素的引用和长度，如上图。字符串 slice range 的索引必须位于有效的 UTF-8 字符边界处，否则会导致 panic。字符串 slice 也可以是 mut 引用。
